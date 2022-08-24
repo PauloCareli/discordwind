@@ -30,10 +30,7 @@ const ContentContainer = () => {
     }}
 
   return (
-    <div className='content-container'>
-      <button onClick={updateChat()}>
-        Test
-      </button>
+    <div className='content-container'>      
       <TopNavigation />
           <div className='content-list'>             
             {song.length>0 ? song.map( (eachText) => {
