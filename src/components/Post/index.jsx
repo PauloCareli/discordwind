@@ -15,7 +15,10 @@ const Post = ({ name, timestamp, text, ...props }) => {
         {text.includes('giphy.gif') ?
           <img src={text} alt='loading...' />
           :
-          <p className='post-text'>{text}</p>
+          text.includes('https://') ?
+            <a className="text-blue-300" target="_blank" href={text}>{text}</a>
+            :
+            <p className='post-text'>{text}</p>
         }
 
       </div>
